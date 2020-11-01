@@ -1,0 +1,30 @@
+.header{
+    /* background-image:linear-gradient(to right bottom, rgba(31, 184, 245, 0.6), rgba(70, 143, 213, 1)) ,
+   url('../img/background1.jpg');  */
+   background-image:linear-gradient(to right bottom, $color-header--light, $color-header--dark) ,
+   url('../img/bg-book-1.jpg'); 
+   background-size:cover;
+   background-position:bottom;
+   position: relative;
+   height: 95vh;
+ // clip-path: polygon(0% 0%, 100% 0%, 100% 84%, 75% 84%, 75% 100%, 52% 86%, 0 85%);
+  //clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+
+   clip-path: ellipse(75% 48% at 51% 35%);
+   &__text-box{
+       position: absolute;
+       top:50%;
+       left:50%;
+       transform: translate(-50%,-50%);
+       text-align: center;
+   }
+   &__logo-box{
+       position: absolute;
+       top: 30px;
+       left: 30px;
+   }
+   &__logo{
+       height: 70px;
+       
+   }
+}

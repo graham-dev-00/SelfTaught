@@ -1,0 +1,87 @@
+.btn{
+    font-family: 'Dancing Script', cursive;
+    &:link,&:visited{
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 10rem;
+        padding: 15px 40px;
+        font-size: 1.6rem;
+        letter-spacing: 5px;
+        transition: 1s;
+        position: relative;
+        
+    }
+    &--white{
+        color:#000000 ;
+        background-color: rgb(255, 255, 255);
+        &::after{
+            background-color:rgb(255, 255, 255);
+        }
+    }
+    &:hover{
+        transform:translateY(-3px);
+        box-shadow: 0 5px 40px $color-btn--while--hover-box-shadow;
+        &::after{
+            /* transform: scale3d(); */
+            transform: scaleX(1.4) scaleY(1.4);
+            opacity: 0;
+        }
+    }
+    &:active{
+        outline: none;
+        transform: translate(-1px);
+        box-shadow: 0 5px 10px  $color-btn--while--active-box-shadow;
+    }
+    &::after{
+        content:"";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 1s;
+        border-radius: 100px;
+    }
+    &--animation{
+        animation-name:animation-btn ;
+        animation-duration: 2s;
+        animation-delay: 1.5s;
+        animation-fill-mode: backwards;
+    }
+}
+//keyframes for btn buy
+@keyframes animate1{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+@keyframes animate2{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+@keyframes animate3{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes animate4{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}

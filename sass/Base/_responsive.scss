@@ -1,0 +1,9 @@
+@media (max-width: 700px) {
+    .section-book-box-cover {
+        display: block;
+        & > div > h3 {
+            margin-top: 2rem;
+        }
+    }
+   
+}

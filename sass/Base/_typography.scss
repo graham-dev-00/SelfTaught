@@ -1,0 +1,73 @@
+body{
+    font-family: "Lato",sans-serif;
+    font-size:400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+
+    padding:30px;
+    /*background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #cea177 74%);
+
+    background-color: #fffffc;
+    background-image: linear-gradient(315deg, #fffffc 0%, #beb7a4 74%);
+    
+    background-color: #fffffc;
+    background-image: linear-gradient(315deg, #fffffc 0%, #beb7a4 74%);
+
+
+background-color: #ffeaa7;
+background-image: linear-gradient(300deg, #ffeaa7 0%, #000000 74%);
+*/
+
+//background-color: #000000;
+background-color: #ffeaa7;
+background-image: linear-gradient(300deg, #ffeaa7 0%, #000000 74%);
+
+}
+.heading-primary{
+    text-transform:uppercase;
+    margin-bottom: 60px;
+    word-spacing: 0.8rem;   /* background-color: #36096d;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+
+    color: transparent;
+    -webkit-background-clip: text;
+*/
+   // color: #26b1d4 ;
+   color: white;
+  
+   &--main{
+    display:block;
+    letter-spacing:1rem;
+   
+    font-size: 6.2rem;
+    font-weight: 400;
+    animation-name: animation-text;
+    animation-duration: 2s;
+    font-family: 'Bree Serif', serif;
+    text-shadow:
+    -3px -3px 0 rgb(0, 0, 0),
+    3px -3px 0 rgb(7, 7, 7),
+    -3px 3px 0 rgb(0, 0, 0),
+    3px 3px 0 rgb(0, 0, 0);
+    
+}
+&--text{
+    display: block;
+   
+  font-size:1.3rem;
+  font-weight: 800;
+  animation-name: animation-text-2;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+  font-family: 'Bree Serif', serif;
+  text-shadow:
+  -2px -2px 0 rgb(5, 5, 5),
+  2px -2px 0 rgb(8, 8, 8),
+  -2px 2px 0 rgb(0, 0, 0)
+  2px 2px 0 rgb(0, 0, 0);
+}
+
+}

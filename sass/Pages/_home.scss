@@ -1,0 +1,275 @@
+.main {
+    &-header {
+        font-size: 5rem;
+        letter-spacing: 0.2rem;
+        word-spacing: 0.2rem;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+        word-spacing: 0.5rem;
+        display: inline-block;
+        //background-image: linear-gradient(to right bottom, #686060, #816a5f );
+        /* text-shadow:
+        -3px -3px 0 rgb(255, 255, 255),
+        3px -3px 0 rgb(255, 255, 255),
+        -3px 3px 0 rgb(255, 252, 252),
+        3px 3px 0 rgb(255, 255, 255);
+        
+        */
+        text-shadow: -2px -2px 0 rgb(255, 255, 255), 2px -2px 0 rgb(251, 251, 251), -2px 2px 0 rgb(255, 255, 255),
+            2px 2px 0 rgb(255, 255, 255);
+        font-family: "Bree Serif", serif;
+        font-weight: 1000;
+        & > span {
+            font-weight: 500;
+            color: rgb(255, 255, 255);
+            text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0),
+                2px 2px 0 rgb(0, 0, 0);
+        }
+    }
+    text-align: center;
+}
+.section__book {
+    width: 383px;
+    height: 567px;
+    &--main {
+        position: absolute;
+        left: 37%;
+        perspective: 1000px;
+        &--box {
+            width: 383px;
+            height: 567px;
+            transform-style: preserve-3d;
+            position: relative;
+            box-shadow: 20px 20px 20px $color-section--book--boxshadow;
+            transition: 0.5s;
+            &:hover {
+                transform: rotateY(35deg);
+                box-shadow: 0px 20px 20px $color-section--book-hover--boxshadow;
+            }
+            &:active {
+                transform: rotateY(180deg);
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                width: 60px;
+                height: 100%;
+                transform-origin: left;
+                background-image: url("../img/book-3d-img/side.jpg");
+                transform: rotateY(90deg);
+                background-position: center;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transform-origin: center;
+                background-image: url("../img/book-3d-img/back.jpg");
+                transform: rotateY(180deg);
+                background-position: center;
+            }
+
+            &--img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            }
+        }
+    }
+}
+.section-book-box {
+    margin: auto;
+    max-width: 114rem;
+    font-family: "Bree Serif", serif;
+    padding: 0 2rem;
+    color: black;
+    
+    &-cover {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5rem;
+        margin-top: 20rem;
+        margin-bottom: 6rem;
+        &:nth-child(even) img {
+            order: 2;
+            margin-left: 10rem;
+        }
+        & > div > h3 {
+            font-family: "Dancing Script", cursive;
+            font-size: 3.5rem;
+            color: #ffffff;
+        }
+        & > div > p {
+            font-family: "Kalam", cursive;
+            font-size: 2rem;
+            margin-top: 5rem;
+            color: #ffffff;
+        }
+        & > img {
+            width: 70%;
+        }
+        &-btn-buy {
+            font-family: "Dancing Script", cursive;
+            background: linear-gradient(300deg, #ffeaa7 0%, #000000 74%);
+            word-spacing: 1rem;
+            display: inline-block;
+            margin-top: 10rem;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            padding:1rem 4rem;
+            font-size:3rem;
+            overflow: hidden;
+            position: relative;
+            
+            &:hover{
+                background: #ffffff;
+                color: black;
+                box-shadow: 0 0 5px #ffffff,
+                            0 0 25px #ffffff,
+                            0 0 50px #ffffff,
+                            0 0 200px #ffffff,
+                            ;
+                & > span:nth-child(1){
+                    background: black;
+                }
+                & > span:nth-child(3){
+                    background: black;
+
+                }
+                & > span:nth-child(4){
+                    background: black;
+
+                }
+            }
+            & > span:nth-child(1){
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+             
+               // background: linear-gradient(315deg, #edd812 0%, #766a65 74%);
+             
+               
+               background: linear-gradient(120deg, #ffeaa7 94%, #ffeaa7 0%);
+               animation-delay: 2s;
+               animation: animate1 2s linear infinite;
+            }
+            
+            & > span:nth-child(2){
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(300deg, #ffeaa7 100%, #ffeaa7 0%);
+                animation: animate2 2s linear infinite;
+                animation-delay: 1s;
+
+            }
+            & > span:nth-child(3){
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(300deg, #ffeaa7 74%, #ffeaa7 0%);
+                animation: animate3 2s linear infinite;
+                
+            }
+            & > span:nth-child(4){
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 2px;
+                height:100%;
+                background: linear-gradient(300deg, #ffeaa7 74%, #000000 0%);
+                animation: animate4 2s linear infinite;
+                animation-delay: 1.1s;
+            }
+          
+        }
+    }
+}
+.section__text--svg {
+    max-width: 114rem;
+    height: 60rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin: auto;
+    margin-top: 20rem;
+    background: #000000;
+    &-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        color: white;
+        text-align: center;
+        position: relative;
+        //-webkit-box-reflect: below 1.5rem linear-gradient(transparent,transparent,rgba(0,0,0,0.2));
+        &:hover {
+            color: rgb(255, 255, 255);
+           
+            background-color: #ffeaa7;
+            background-image: linear-gradient(200deg, #ffeaa7 0%, #000000 74%);
+
+            &::before {
+                border: 4px solid rgb(0, 0, 0);
+            }
+            &::after {
+                border: 4px solid rgb(0, 0, 0);
+                border-right: none;
+                background-color: rgba($color: #000000, $alpha: 0.5);
+            }
+        }
+        &::before {
+            transition: 3s;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -10px;
+            left: -10px;
+            border: 4px solid white;
+            filter: url(#wavy);
+        }
+        
+        &::after {
+            transition: 3s;
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: -10px;
+            left: -10px;
+            border: 4px solid white;
+            border-right: none;
+            
+            background-color: rgba(255, 255, 255, 0.1);
+            filter: url(#wavy);
+        }
+        &--content {
+            transition: 1s;
+            font-family: "Dancing Script", cursive;
+            text-align: center;
+            line-height: 4rem;
+            p {
+                font-family: "Kalam", cursive;
+            }
+        }
+    }
+
+    /*Xét tất cả trừ box cuối cùng */
+}
+svg{
+    width: 0;
+    height: 0;
+}
